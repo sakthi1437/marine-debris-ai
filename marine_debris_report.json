@@ -1,0 +1,40 @@
+[
+  {
+    "ID": 45,
+    "Survey ID": "fc4976d2a6574aca9f4c374784aba6a3",
+    "Image": "b-25-hires.jpg",
+    "Object Type": "debris",
+    "Model Confidence": 0.88,
+    "Final Confidence": 0.88,
+    "Priority": "HIGH",
+    "Latitude": 12.223,
+    "Longitude": 15.1194,
+    "X1": 246.96000000000004,
+    "Y1": 278.7,
+    "X2": 458.64000000000004,
+    "Y2": 520.24,
+    "Width": 211.68,
+    "Height": 241.54000000000002,
+    "Metadata Source": "simulated",
+    "Created At": "2026-08-27T05:50:29.147892"
+  },
+  {
+    "ID": 46,
+    "Survey ID": "fc4976d2a6574aca9f4c374784aba6a3",
+    "Image": "b-25-hires.jpg",
+    "Object Type": "pipe",
+    "Model Confidence": 0.76,
+    "Final Confidence": 0.76,
+    "Priority": "MEDIUM",
+    "Latitude": 12.223,
+    "Longitude": 15.1194,
+    "X1": 546.84,
+    "Y1": 538.8199999999999,
+    "X2": 758.52,
+    "Y2": 668.88,
+    "Width": 211.67999999999995,
+    "Height": 130.06000000000006,
+    "Metadata Source": "simulated",
+    "Created At": "2026-08-27T05:50:29.161075"
+  }
+]

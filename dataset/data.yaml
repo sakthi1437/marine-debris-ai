@@ -1,0 +1,10 @@
+path: ./dataset
+train: images/train
+val: images/val
+test: images/test
+names:
+  0: ghost_net
+  1: shipwreck
+  2: pipe
+  3: cylinder
+  4: debris

@@ -1,0 +1,1 @@
+{"scripts":{"dev":"vite","build":"vite build","test":"vitest run"},"dependencies":{"axios":"latest","leaflet":"latest","react":"latest","react-dom":"latest","react-leaflet":"latest"},"devDependencies":{"@vitejs/plugin-react":"latest","vite":"latest","vitest":"latest"},"type":"module"}
