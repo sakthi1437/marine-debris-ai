@@ -3,8 +3,8 @@ train: images/train
 val: images/val
 test: images/test
 names:
-  0: ghost_net
-  1: shipwreck
-  2: pipe
-  3: cylinder
-  4: debris
+  0: airplane
+  1: drowning victim
+  2: mine
+  3: shipwreck
+  4: seafloor

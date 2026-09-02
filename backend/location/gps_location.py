@@ -1,9 +1,12 @@
-from backend.location.base_location import LocationProvider, LocationUnavailableError
+from backend.location.base_location import Location, LocationProvider, LocationUnavailableError
+from backend.location.gps_service import PhoneGPSService, get_default_gps_service
 
 
 class GPSLocationProvider(LocationProvider):
-    source = "live_gps"
+    source = "phone_gps"
 
-    def get_location(self):
-        # GPS hardware adapters can implement this contract without changing the UI.
-        raise LocationUnavailableError("Live GPS is unavailable in this desktop environment")
+    def __init__(self, gps_service: PhoneGPSService | None = None):
+        self.gps_service = gps_service or get_default_gps_service()
+
+    def get_location(self) -> Location:
+        return self.gps_service.get_location()

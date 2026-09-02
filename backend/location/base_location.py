@@ -7,6 +7,8 @@ class Location:
     latitude: float
     longitude: float
     source: str
+    accuracy: float | None = None
+    timestamp: float | None = None
 
 
 class LocationProvider(ABC):

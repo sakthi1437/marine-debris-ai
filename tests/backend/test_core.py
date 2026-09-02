@@ -5,6 +5,7 @@ from backend.ai.anomaly_scoring import score_detection
 from backend.ai.filtering import filter_detections
 from backend.ai.preprocessing import preprocess_image, validate_image
 from backend.main import app
+from backend.ai.yolo_detector import YoloDetector
 
 
 def image_bytes():
@@ -39,7 +40,13 @@ def test_invalid_image_rejected():
     assert response.status_code == 400
 
 
-def test_ai_mode_reports_missing_model():
+def test_model_directory_reports_specific_error(tmp_path):
+    detector = YoloDetector(tmp_path)
+    assert not detector.available
+    assert detector.error == "MODEL_PATH_DIRECTORY"
+
+
+def test_ai_mode_runs_with_model():
     response = TestClient(app).post("/api/analyze", files={"file": ("sonar.png", image_bytes(), "image/png")})
-    assert response.status_code == 503
-    assert response.json()["detail"]["code"] == "MODEL_NOT_FOUND"
+    assert response.status_code == 200
+    assert response.json()["mode"] == "ai"
